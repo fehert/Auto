@@ -61,6 +61,17 @@ namespace Auto
             cmd.ExecuteNonQuery();
             conn.Connection.Close();
         }
+        public static void delCar()
+        {
+            conn.Connection.Open();
+            Console.Write("Kérem az autó azonosítóját: ");
+            int id = int.Parse(Console.ReadLine());
+            string sql = $"DELETE FROM `cars` WHERE `Id` = {id}";
+            MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
+            cmd.ExecuteNonQuery();
+            conn.Connection.Close();
+        }
+
         static void Main(string[] args)
         {
             
@@ -71,6 +82,7 @@ namespace Auto
             }
             addNewCar();
             upDateCar();
+            delCar();
             Console.ReadLine();
         }
     }
