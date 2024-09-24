@@ -16,7 +16,7 @@ namespace Auto
         private string Password;
         private string ConnectionString;
 
-        public Connect()
+        public Connect() 
         {
            Host = "localhost";
             Database = "auto";
