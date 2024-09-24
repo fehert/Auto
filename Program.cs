@@ -75,13 +75,13 @@ namespace Auto
         static void Main(string[] args)
         {
             
-            feltolt();
+            /*feltolt();
             foreach (var item in cars)
             {
                 Console.WriteLine("Autó gyártója:" + item.Brand+" | "+"motoszáma:"+item.License);  
             }
             addNewCar();
-            upDateCar();
+            upDateCar();*/
             delCar();
             Console.ReadLine();
         }
